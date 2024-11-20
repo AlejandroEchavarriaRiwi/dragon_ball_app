@@ -5,7 +5,7 @@ import '../screens/character_detail_screen.dart';
 class CharacterCard extends StatelessWidget {
   final Character character;
 
-  CharacterCard({required this.character});
+  const CharacterCard({super.key, required this.character});
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +20,18 @@ class CharacterCard extends StatelessWidget {
       },
       child: Card(
         elevation: 5,
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
+        color: const Color.fromARGB(255, 88, 188, 255), // Cambia el color de fondo aquí
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
               aspectRatio: 16 / 9, // Relación de aspecto para evitar recortes.
               child: ClipRRect(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
                 child: Image.network(
                   character.imageUrl,
                   fit: BoxFit.contain, // Ajusta la imagen sin recortarla.
@@ -46,24 +47,24 @@ class CharacterCard extends StatelessWidget {
                     );
                   },
                   errorBuilder: (context, error, stackTrace) {
-                    return Center(child: Icon(Icons.error, size: 50));
+                    return const Center(child: Icon(Icons.error, size: 50));
                   },
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     character.name,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Text(
                     'Raza: ${character.race}',
-                    style: TextStyle(fontSize: 16),
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ],
               ),

@@ -1,5 +1,5 @@
-name: dragon_ball_app
-description: "A new Flutter project."
+name: dragon_riwi_api
+description: "A new riwi project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -44,6 +44,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
   flutter_launcher_icons: ^0.13.1
+  flutter_layout_grid: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -62,6 +63,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icon.png
+    - assets/logo.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

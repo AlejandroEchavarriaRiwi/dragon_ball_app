@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dragon_ball_app">
+    package="com.dragon_riwi_api">
 
     <!-- Permiso necesario para que la aplicación acceda a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:label="dragon_ball_app"
+        android:label="dragon_riwi_api"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
